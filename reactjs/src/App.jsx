@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
 import './App.css';
 import Card from './components/Card';
 import Counter from './components/Counter';
+import Navbar from './components/Navbar';
 import Todo from './components/Todo'
 
 
@@ -13,30 +15,27 @@ const App =()=> {
    
 
 return (
-  <div className="container">
-       
-           <Card/>
-
-
-
-
+    <>
+    <Router>
+       <Navbar/>
+    </Router>
 {/* 
        <ThemeContext.Provider value={darkTheme}>
-
-        <button onClick={toggleTheme}>Toggle Theme</button>
-
-        <FunctionContexComponent/>
-       </ThemeContext.Provider> */}
+       
+       <button onClick={toggleTheme}>Toggle Theme</button>
+       
+      </ThemeContext.Provider> */}
 
 
 
 
 {/*   
        <button  onClick={()=>{
-        setIsCardShown(!isCardShown)
-      }}>CLICK ME</button>cd
+         setIsCardShown(!isCardShown)
+        }}>CLICK ME</button>cd
       {isCardShown && <Card value={"nesto"}/>} */}
-    </div>
+  
+      </>
   );
 }
 

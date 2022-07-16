@@ -11,7 +11,7 @@ const Card =({value})=>{
     }
     return(
         <div className='card'> 
-        <div>{boja}</div>
+        <div>{boja}{value}</div>
          <button className='submit' onClick={()=>setBoja(<div style={themeStyles}></div>)}> submit</button>
           <button className='delete' onClick={()=>setBoja(false)}>delete</button>
         </div>
