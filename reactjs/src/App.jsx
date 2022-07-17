@@ -11,23 +11,15 @@ import Todo from './components/Todo'
 
 const App =()=> {
   // const[isCardShown,setIsCardShown]=useState(false)
-  
-   
+    
+   const data=["amin","saki","salkovic"]
 
 return (
-    <>
-    <Router>
-       <Navbar/>
-    </Router>
-{/* 
-       <ThemeContext.Provider value={darkTheme}>
-       
-       <button onClick={toggleTheme}>Toggle Theme</button>
-       
-      </ThemeContext.Provider> */}
-
-
-
+    <div className="container">
+      <Todo/>
+      <Card/>
+      
+{data.map}
 
 {/*   
        <button  onClick={()=>{
@@ -35,7 +27,8 @@ return (
         }}>CLICK ME</button>cd
       {isCardShown && <Card value={"nesto"}/>} */}
   
-      </>
+     
+  </div>
   );
 }
 
