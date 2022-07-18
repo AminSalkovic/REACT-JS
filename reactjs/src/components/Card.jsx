@@ -1,20 +1,19 @@
 import { useState } from 'react';
 
 
-const Card =({value})=>{  
-    const[boja,setBoja]=useState(false)
+const Card =(props)=>{  
+    const[isChecked,setIsChecked]=useState(false)
     
-
-    const themeStyles={
-        backgroundColor:'orange',
-      
-    }
-    return(
-        <div className='card'> 
-        <div>{boja}{value}</div>
-         <button className='submit' onClick={()=>setBoja(<div style={themeStyles}></div>)}> submit</button>
-          <button className='delete' onClick={()=>setBoja(false)}>delete</button>
+  return(
+    <div className="card">
+        <div className={`kartica ${isChecked ? 'cekirano' : ''}`}>
+          <p>{props.title}</p>
         </div>
-    )
+
+        <button className='submit' onClick={()=>{setIsChecked(!isChecked)}}>Submit</button>
+        <button className='delete'> Delete</button>
+    </div>
+  )
+ 
 }
 export default Card;
