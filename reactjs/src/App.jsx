@@ -8,70 +8,66 @@ import Navbar from './components/Navbar'
 const App =()=> {
   // const[isCardShown,setIsCardShown]=useState(false)
 
+  const[data,setData]=useState([]);
 
-
-
-
-  return(
-
-    <Router>
-       <Navbar/>
-     </Router>
-  )
-  
-//   const[data,setData]=useState([]);
-
-//   let a=""
-// return (
-//   <div className="container">
-   
-//        <h1>TODO LIST</h1>
-       
-//        <div className="unos">
-
-//         <input type="text" onChange={(e)=>{
-//           a=e.target.value
-//         }}/>
-//         <button className='dugme' onClick={()=>{
-//           setData([...data,a])
-//         }}>Submit</button>
-//        </div>
-       
-//        {data.map((el) => {
-//         return <Card title={el} />;
-//       })}
-         
-//      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   //  <Router>
-    //    <Navbar/>
-    //  </Router>
+  let a=""
+return (
+<div className="container">
+ 
+     <h1>TODO LIST</h1>
      
+     <div className="unos">
+     
+
+      <input type="text" onChange={(e)=>{
+        a=e.target.value
+      }}/>
+      <button className='dugme' onClick={()=>{
+        setData([...data,a])
+      }}>Submit</button>
+    
+     </div>
+     
+     {data.map((el) => {
+       return <Card title={el} />;
+      })}
+    
+
+
+
+
+{/* // return( */}
+
+{/* //   <Router>
+//      <Navbar/>
+//    </Router> */}
+      {/* ) */}
+
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
       //  <button  onClick={()=>{
@@ -83,7 +79,7 @@ const App =()=> {
     
     
  
-  // );
+  );
 }
 
 export default App;
