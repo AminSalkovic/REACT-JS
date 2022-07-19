@@ -8,29 +8,40 @@ import Navbar from './components/Navbar'
 const App =()=> {
   // const[isCardShown,setIsCardShown]=useState(false)
 
-  const[data,setData]=useState([]);
 
-  let a=""
-return (
-  <div className="container">
+
+
+
+  return(
+
+    <Router>
+       <Navbar/>
+     </Router>
+  )
+  
+//   const[data,setData]=useState([]);
+
+//   let a=""
+// return (
+//   <div className="container">
    
-       <h1>TODO LIST</h1>
+//        <h1>TODO LIST</h1>
        
-       <div className="unos">
+//        <div className="unos">
 
-        <input type="text" onChange={(e)=>{
-          a=e.target.value
-        }}/>
-        <button className='dugme' onClick={()=>{
-          setData([...data,a])
-        }}>Submit</button>
-       </div>
+//         <input type="text" onChange={(e)=>{
+//           a=e.target.value
+//         }}/>
+//         <button className='dugme' onClick={()=>{
+//           setData([...data,a])
+//         }}>Submit</button>
+//        </div>
        
-       {data.map((el) => {
-        return <Card title={el} />;
-      })}
+//        {data.map((el) => {
+//         return <Card title={el} />;
+//       })}
          
-     </div>
+//      </div>
 
 
 
@@ -72,7 +83,7 @@ return (
     
     
  
-  );
+  // );
 }
 
 export default App;
