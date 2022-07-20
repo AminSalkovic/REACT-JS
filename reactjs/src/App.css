@@ -15,7 +15,7 @@
 }
 h1{
   text-align: center;
-  color:#fff;
+   border: 2px solid black;
   font-size: 40px;
   font-weight:600 ;
 

@@ -1,20 +1,49 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect} from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 import Card from './components/Card'
 import Navbar from './components/Navbar'
 
-
+//useefect reakcije cele komponente na nesto
 const App =()=> {
   // const[isCardShown,setIsCardShown]=useState(false)
 
-  const[data,setData]=useState([]);
+  // const[data,setData]=useState([]);
 
-  let a=""
+  const[facts,setFacts]=useState([])
+
+   
+  function getFacts() {
+    fetch("https://catfact.ninja/facts")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setFacts(data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+
+  useEffect(() => {
+    getFacts();
+    console.log("PRVI USEEFFCT");
+  }, []);
+  // let a=""
 return (
 <div className="container">
  
-     <h1>TODO LIST</h1>
+<div>
+      {facts.map((el) => {
+        return <h1>{el.fact}</h1>;
+      })}
+    </div>
+  
+ 
+     
+  
+
+     {/* /* <h1>TODO LIST</h1>
      
      <div className="unos">
      
@@ -30,7 +59,7 @@ return (
      
      {data.map((el) => {
        return <Card title={el} />;
-      })}
+      })} */} 
     
 
 
@@ -41,7 +70,7 @@ return (
 {/* //   <Router>
 //      <Navbar/>
 //    </Router> */}
-      {/* ) */}
+      
 
    </div>
 
