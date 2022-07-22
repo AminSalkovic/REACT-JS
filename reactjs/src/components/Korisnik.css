@@ -1,0 +1,10 @@
+.karticakorisnika{
+  display: flex;
+}
+.karticakorisnika input{
+    padding: 10px;
+}
+.karticakorisnika button{
+    padding: 10px 40px;
+    background-color: orange;
+}
