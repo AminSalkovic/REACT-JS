@@ -63,7 +63,6 @@ const App =()=> {
         <h1>{value.email}</h1>
       </div>
        
-      <Korisnikp/>
     </div>
 
   );
