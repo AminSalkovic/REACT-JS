@@ -9,7 +9,7 @@ const Korisnik=()=>{
         <input type="text" />
         <button  onClick={setIsCardShown(!isCardShown)}>ADD</button>
         {isCardShown && <Koirniskp/>}
-       
+        {/* //for delete */}
       
     </div>
 

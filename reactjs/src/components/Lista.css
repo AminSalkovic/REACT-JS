@@ -1,0 +1,12 @@
+.lista{
+    margin-top: 5px;
+}
+.lista ul li{
+    list-style: none;
+    padding: 15px 10px;
+    background-color: rgb(179, 163, 163);
+    font-size: 20px;
+}
+.lista ul li:hover{
+    background-color: rgb(151, 140, 140);
+}
