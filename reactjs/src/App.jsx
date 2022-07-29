@@ -8,13 +8,25 @@ import Calulator from './components/Calculator'
 
 //useefect reakcije cele komponente na nesto
 const App =()=> {
+  const  options={
+    method:'GET',
+    url:"https://numbersapi.p.rapidapi.com/6/21/date",
+    params:{fragment:"true",json:"true"},
+    headers:{
+      "X-RapidAPI-key"
+    }
+  };
+  const[data,setData]=useState
 
+  useEffect(() => {
+    Data();
+  }, []);
 
   return (
    
        
     <div className="container">
-       <Calulator/>
+      
     </div>
 
   );
