@@ -1,7 +1,10 @@
 import React, { useState,useEffect} from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
-import Calulator from './components/Calculator'
+import Korsnikp from './components/Korisnikp'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+
 
 
 
@@ -13,21 +16,26 @@ const App =()=> {
     url:"https://numbersapi.p.rapidapi.com/6/21/date",
     params:{fragment:"true",json:"true"},
     headers:{
-      "X-RapidAPI-key"
     }
   };
-  const[data,setData]=useState
-
-  useEffect(() => {
-    Data();
-  }, []);
-
+  
+  useEffect(()=>{
+    Aos.init({})
+  },[])
   return (
    
        
     <div className="container">
-      
-    </div>
+              
+              <div className="grids">
+                <div className="boxex">1</div>
+                <div className="boxex">2</div>
+                <div className="boxex">3</div>
+                <div className="boxex">4</div>
+                <div className="boxex">5</div>
+                <div className="boxex">6</div>
+              </div>
+          </div>
 
   );
 
