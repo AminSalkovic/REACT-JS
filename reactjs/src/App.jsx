@@ -4,6 +4,7 @@ import './App.css';
 import Korsnikp from './components/Korisnikp'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+import  Drop from './components/Drop';
 
 
 
@@ -20,7 +21,7 @@ const App =()=> {
   };
   
   useEffect(()=>{
-    Aos.init({})
+    Aos.init({duration:1000})
   },[])
   return (
    
@@ -30,9 +31,14 @@ const App =()=> {
               <div className="grids">
                 <div className="boxex">1</div>
                 <div className="boxex">2</div>
-                <div className="boxex">3</div>
-                <div className="boxex">4</div>
-                <div className="boxex">5</div>
+                <div data-aos="fade-up" className="boxex">3</div>
+                <div  data-aos="fade-down"className="boxex">4</div>
+                <div  data-aos="zoom-in" className="boxex">5</div>
+                <div  data-aos="zoom-in-up"  className="boxex">6</div>
+                <div className="boxex">6</div>
+                <div className="boxex">6</div>
+                <Drop />
+                <div className="boxex">6</div>
                 <div className="boxex">6</div>
               </div>
           </div>

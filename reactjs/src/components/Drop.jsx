@@ -8,7 +8,7 @@ const Drop=()=>{
  
     return(
         <>
-        <div className="dropdown">
+        <div className="dropdown" data-aos="fade-down">
                 <div className='menu-icon' onClick={()=>setClick(!click)}>
                 <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
                 </div>
