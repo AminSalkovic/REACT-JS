@@ -3,21 +3,8 @@
   margin: 0;
 }
 
-.boxex{
-  margin: 20px;
-  margin-top: 150px;
-  background-color: aquamarine;
-  height: 200px;
-  overflow: hidden;
-  max-height: 35vh;
-  box-shadow: 0px 12px 18px -6px rgba(0,0,0,0.3);
-  border-radius: 10px;
-}
-.grids{
-  max-width: 50%;
-  margin: auto;
-}
-/* .container{
+
+ .container{
   background-color: rgb(56, 92, 211);
   width: 100%;
   height: 1000vh;
@@ -98,7 +85,7 @@ h1{
 }
 .prijava{
   padding: 20px 100px;
-}  */
+}  
 
 
 /* * {
