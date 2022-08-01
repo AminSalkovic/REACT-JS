@@ -4,6 +4,7 @@ import './App.css';
 import Axios from 'axios'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+import User from './components/users/User';
 
 
 
@@ -12,38 +13,13 @@ import 'aos/dist/aos.css'
 
 //useefect reakcije cele komponente na nesto
 const App =()=> {
-
-  const[data,setData]=useState([])
-    
-  useEffect(() => {
-   Axios.get("https://api.github.com/users/aminsalkovic").
-   then((response)=>{
-    setData([response.data]) 
-   }).catch(err=>
-       console.log(err));
-   
-  }, [])
-  
-  
-  
-  useEffect(()=>{
+useEffect(()=>{
     Aos.init({duration:1000})
   },[])
 
-  return (
-   
-       
+  return ( 
     <div className="container">
-            {data.map((user)=>{
-              return(
-
-                  <>
-                <h1>{user?.name}</h1>
-                <h1>{user?.followers}</h1>
-                  </>
-                 
-              )
-            })}
+      <User/>
     </div>
   );
 

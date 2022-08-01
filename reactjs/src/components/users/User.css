@@ -1,0 +1,31 @@
+.user{
+    width: 500px;
+    height: 500px;
+    background-color: #fff;
+
+}
+.user img{
+    width: 150px;
+    height: 200px;
+}
+.user h1{
+    font-size: 20px;
+    border: none;
+    text-align: left;
+    margin: 20px;
+}
+ input{
+    border: 1px solid rgb(175, 80, 25);
+    background-color: transparent;
+    outline: none;
+    border-radius: 30px 0px 0px 30px;
+}
+button{
+    background-color:  rgb(23, 82, 160);
+    border: none;
+    width: 150px;
+    border-radius:0px 30px 30px 0px;
+    height: 51px;
+    color: #fff;
+    margin-top: 5px;
+}
