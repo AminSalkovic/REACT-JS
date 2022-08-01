@@ -5,7 +5,8 @@ import  Axios  from 'axios'
 export default function User() {
 
     const [users, setUsers] = useState([]);
-  let searchValue = "";
+
+    let searchValue = "";
 
   const getGithubData = (user) => {
     Axios.get(`https://api.github.com/users/${user}`)
@@ -17,16 +18,17 @@ export default function User() {
 
   return (
       <div style={{display:"flex"}} >
-       <input type="text" onChange={(e) => {searchValue = e.target.value;}}/>
-      <button onClick={() => {
+       <input data-aos="fade-up-right" type="text" onChange={(e) => {searchValue = e.target.value;}}/>
+      <button  data-aos="fade-down-left" onClick={() => {
          getGithubData(searchValue);
        }}>Submit</button>
       {users.map((user) => {
         return (
-            <div className="user">
+            <div className="kartica">
             <img src={user?.avatar_url} />
             <h1>Name:{user?.name}</h1>
             <h1>Followers:{user?.followers}</h1>
+            <h1>Location:{user?.location}</h1>
           </div>
         );
       })}

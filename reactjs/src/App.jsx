@@ -14,11 +14,12 @@ import User from './components/users/User';
 //useefect reakcije cele komponente na nesto
 const App =()=> {
 useEffect(()=>{
-    Aos.init({duration:1000})
+    Aos.init({duration:2000})
   },[])
 
   return ( 
     <div className="container">
+      <div style={{height:"700px"}}></div>
       <User/>
     </div>
   );
