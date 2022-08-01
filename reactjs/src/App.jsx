@@ -1,6 +1,7 @@
 import React, { useState,useEffect} from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
+import Axios from 'axios'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 
@@ -11,13 +12,18 @@ import 'aos/dist/aos.css'
 
 //useefect reakcije cele komponente na nesto
 const App =()=> {
-  const  options={
-    method:'GET',
-    url:"https://numbersapi.p.rapidapi.com/6/21/date",
-    params:{fragment:"true",json:"true"},
-    headers:{
-    }
-  };
+
+  const[data,setData]=useState([])
+    
+  useEffect(() => {
+   Axios.get("https://api.github.com/users/aminsalkovic").
+   then((response)=>{
+    setData([response.data]) 
+   }).catch(err=>
+       console.log(err));
+   
+  }, [])
+  
   
   
   useEffect(()=>{
@@ -28,7 +34,16 @@ const App =()=> {
    
        
     <div className="container">
-            
+            {data.map((user)=>{
+              return(
+
+                  <>
+                <h1>{user?.name}</h1>
+                <h1>{user?.followers}</h1>
+                  </>
+                 
+              )
+            })}
     </div>
   );
 

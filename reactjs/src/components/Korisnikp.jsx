@@ -13,7 +13,6 @@ const GithubCard = () => {
         setUsers([...users, data]);
       });
   };
-
   useEffect(() => {
     getGithubData();
   }, []);
