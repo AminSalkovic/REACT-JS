@@ -10,7 +10,8 @@ export default function User() {
 
   const getGithubData = (user) => {
     Axios.get(`https://api.github.com/users/${user}`)
-      .then((res) =>  setUsers([res.data])).catch((er)=>{console.log(er);});
+      .then((res) =>  setUsers([res.data]))
+      .catch((er)=>{console.log(er);});
     };
   useEffect(() => {
     getGithubData();
