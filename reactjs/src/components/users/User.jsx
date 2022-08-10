@@ -26,7 +26,7 @@ export default function User() {
       {users.map((user) => {
         return (
             <div className="kartica">
-            <img src={user?.avatar_url} />
+            <img src={user?.avatar_url}/>
             <h1>Name:{user?.name}</h1>
             <h1>Followers:{user?.followers}</h1>
             <h1>Location:{user?.location}</h1>

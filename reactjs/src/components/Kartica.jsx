@@ -5,7 +5,7 @@ export default function kartica() {
 
   return (
     <div className="kartica">
-
+        
     </div>
   )
 }

@@ -1,9 +1,12 @@
 import React, { useState,useEffect} from 'react';
 import './App.css';
+import { Route,Routes } from 'react-router-dom';
+import Counter from './components/Counter'
+import Drop from './components/Drop'
 import Axios from 'axios'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-import Kartica from './components/Kartica';
+
 
 
 
@@ -13,31 +16,12 @@ import Kartica from './components/Kartica';
 const App =()=> {
   
 
-  const axios = require("axios");
-  const options = {
-    method: 'GET',
-  url: 'https://free-news.p.rapidapi.com/v1/search',
-  params: {q: 'Elon Musk', lang: 'en'},
-  headers: {
-    'X-RapidAPI-Key': 'd210c91a4bmshca1b1f1261bbac8p1d939ejsne4e09850e233',
-    'X-RapidAPI-Host': 'free-news.p.rapidapi.com'
-  }
-};
-
-axios.request(options).then(function (response) {
-  console.log(response.data);
-}).catch(function (error) {
-	console.error(error);
-});
-
 return ( 
   <div className="container">
-       <form>
-        <input type="search"/> 
-        <button>Choose tags</button>
-       </form>
-
-        <Kartica/>
+      <Routes>
+        <Route path={'counter'} element={<Counter/>}/>
+        <Route path={'drop'} element={<Drop/>}/>
+      </Routes>
 
     </div>
   );
