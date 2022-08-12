@@ -1,28 +1,34 @@
 import React, { useState,useEffect} from 'react';
 import './App.css';
-import { Route,Routes } from 'react-router-dom';
+import { Route,Routes,Link} from 'react-router-dom';
 import Counter from './components/Counter'
+import Korisnikp from './components/Korisnikp'
 import Drop from './components/Drop'
 import Axios from 'axios'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-
-
+import Lista from './components/Lista';
 
 
 //useefect reakcije cele komponente na nesto
 //use memo upordejuje vrednosti ako su iste nece rirenderovati ako nisu rirenderovace
 
 const App =()=> {
-  
+
+
 
 return ( 
   <div className="container">
+ 
+       
       <Routes>
         <Route path={'counter'} element={<Counter/>}/>
-        <Route path={'drop'} element={<Drop/>}/>
+        <Route path={'korisnikp'} element={<Korisnikp/>}/>
       </Routes>
-
+        <div>
+           <Link to={"/counter"}><h1>welcome</h1></Link>
+           <Link to={"/korisnikp"}><h1>click</h1></Link>
+         </div>
     </div>
   );
   
