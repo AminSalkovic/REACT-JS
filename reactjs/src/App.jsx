@@ -4,34 +4,27 @@ import { Route,Routes,Link} from 'react-router-dom';
 import Axios from 'axios'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-import Card from './components/Card';
+
+import Navbar from './components/Navbar';
+import Cards from './components/Cards';
+import MyComponent from './components/MyComponent';
 
 
 //useefect reakcije cele komponente na nesto
 //use memo upordejuje vrednosti ako su iste nece rirenderovati ako nisu rirenderovace
 
+export const UserContext=React.createContext()
 const App =()=> {
-  const [data ,setData]=useState([])
-  let a=""
-
+ 
+  const[myState,setMyState]=useState('amin')
 
 return ( 
-  <div className="container">
-    
-  
-   
-       <input type="text"  onChange={(e)=>{
-            a=e.target.value
-
-       }}/>
-       <button onClick={()=>{
-        setData([...data,a])
-       }}>ADD</button>
-           
-           {data.map((el)=>{
-         return <Card title={el}/>
-           })}
-        </div>
+  <UserContext.Provider>
+ <>
+     <Cards/>
+     <MyComponent/>
+ </>
+  </UserContext.Provider>
     
   );
   
