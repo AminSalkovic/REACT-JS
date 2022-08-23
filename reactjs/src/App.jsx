@@ -21,8 +21,7 @@ const App =()=> {
 return ( 
   <UserContext.Provider>
  <>
-     <Cards/>
-     <MyComponent/>
+        <Navbar/>
  </>
   </UserContext.Provider>
     
