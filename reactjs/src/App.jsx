@@ -4,10 +4,7 @@ import { Route,Routes,Link} from 'react-router-dom';
 import Axios from 'axios'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-
-import Navbar from './components/Navbar';
-import Cards from './components/Cards';
-import MyComponent from './components/MyComponent';
+import Card from './components/Card'
 
 
 //useefect reakcije cele komponente na nesto
@@ -15,17 +12,25 @@ import MyComponent from './components/MyComponent';
 
 export const UserContext=React.createContext()
 const App =()=> {
- 
+  const[data,setData]=useState([])
+  let a=''
   const[myState,setMyState]=useState('amin')
-
+   
 return ( 
-  <UserContext.Provider>
- <>
-        <Navbar/>
- </>
-  </UserContext.Provider>
-    
+<>     
+  <input type="text"  placeholder='unesi mail' onChange={(e)=>{
+     a=e.target.value  }}/>
+
+     <button onClick={()=>{
+      setData(a)
+       console.log(a);
+     }}>prijava</button>
+  {data === 'amin'? <Card/> : ''}
+   
+</> 
   );
+
+
   
   
   
