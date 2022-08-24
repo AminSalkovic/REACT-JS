@@ -1,4 +1,5 @@
-import React, { useState,useEffect} from 'react';
+import React, { useState,useEffect,useContext} from 'react';
+import { Context } from './components/UserContext';
 import './App.css';
 import { Route,Routes,Link} from 'react-router-dom';
 import Axios from 'axios'
@@ -12,21 +13,14 @@ import Card from './components/Card'
 
 export const UserContext=React.createContext()
 const App =()=> {
-  const[data,setData]=useState([])
-  let a=''
-  const[myState,setMyState]=useState('amin')
+ 
+  const[user,setUser]=useContext(Context)
    
 return ( 
 <>     
-  <input type="text"  placeholder='unesi mail' onChange={(e)=>{
-     a=e.target.value  }}/>
-
-     <button onClick={()=>{
-      setData(a)
-       console.log(a);
-     }}>prijava</button>
-  {data === 'amin'? <Card/> : ''}
-   
+  <button onClick={()=>setUser(user-1)}>-1</button>
+  <h1>{user}</h1>
+  <button onClick={()=>setUser(user+1)}>+1</button>
 </> 
   );
 
