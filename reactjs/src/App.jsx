@@ -1,5 +1,4 @@
-import React, { useState,useEffect,useContext} from 'react';
-import { Context } from './components/UserContext';
+import React, { useState,useEffect} from 'react';
 import './App.css';
 import { Route,Routes,Link} from 'react-router-dom';
 import Axios from 'axios'
@@ -11,16 +10,13 @@ import Card from './components/Card'
 //useefect reakcije cele komponente na nesto
 //use memo upordejuje vrednosti ako su iste nece rirenderovati ako nisu rirenderovace
 
-export const UserContext=React.createContext()
+
 const App =()=> {
- 
-  const[user,setUser]=useContext(Context)
-   
-return ( 
+    
+    
+   return ( 
 <>     
-  <button onClick={()=>setUser(user-1)}>-1</button>
-  <h1>{user}</h1>
-  <button onClick={()=>setUser(user+1)}>+1</button>
+
 </> 
   );
 
