@@ -2,7 +2,7 @@ import React,{useEffect,useState} from 'react'
 import './User.css'
 import  Axios  from 'axios'
 
-export default function User() {
+export default function Git() {
 
     const [users, setUsers] = useState([]);
 

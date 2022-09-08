@@ -4,8 +4,7 @@ import { Route,Routes,Link} from 'react-router-dom';
 import Axios from 'axios'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-import Card from './components/Card'
-
+import Searchuser from './components/users/Searchuser'
 
 //useefect reakcije cele komponente na nesto
 //use memo upordejuje vrednosti ako su iste nece rirenderovati ako nisu rirenderovace
@@ -15,9 +14,10 @@ const App =()=> {
     
     
    return ( 
-<>     
- <h1>hello</h1>
-</> 
+       <>
+          <Searchuser/>
+       </>
+
   );
 
 
