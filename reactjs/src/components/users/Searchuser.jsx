@@ -1,25 +1,28 @@
 
 import React from 'react'
-import { useEffect } from 'react'
+import { useEffect,useState} from 'react'
+import Card from '../Card'
 
 const Searchuser = () => {
+  
+    const[data,setData]=useState([])
 
-    const githubdadta=()=>{
-        fetch(`https://api.github.com/users/AminSalkovic/`).
-        then((res)=>{
-            res.json()
-            console.log(res);
-        }
-            )
-    }
-
-    useEffect(()=>{
-      githubdadta()   
-    },[])
-    
+    let a=''
     return (
 <>
+       
 
+//   <input type="text" onChange={(e)=>{
+        a=e.target.value
+      }}/>
+      <button className='dugme' onClick={()=>{
+        setData([...data,a])
+      }}>Submit</button>
+    
+     
+     {data.map((el) => {
+       return <Card/>;
+      })} 
 </>
   )
 }

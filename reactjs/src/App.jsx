@@ -4,7 +4,7 @@ import { Route,Routes,Link} from 'react-router-dom';
 import Axios from 'axios'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-import Searchuser from './components/users/Searchuser'
+import Nina from './components/Nina';
 
 //useefect reakcije cele komponente na nesto
 //use memo upordejuje vrednosti ako su iste nece rirenderovati ako nisu rirenderovace
@@ -15,7 +15,7 @@ const App =()=> {
     
    return ( 
        <>
-          <Searchuser/>
+        <Nina/>
        </>
 
   );
