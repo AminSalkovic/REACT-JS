@@ -5,22 +5,15 @@ const Nina = () => {
  
     const[datas,setDatas]=useState([])
   
- 
-      const ninafacts =()=>{
-          Axios.get("https://catfact.ninja/facts")
-          .then((res)=> {
-            setDatas([res.data])
-        })
-          .catch((er)=>console.log(er))
-      }
-   
+    const data=()=>{
+          Axios.get("http://localhost:3000/tags").then((res)=>console.log(res)).catch((er)=>console.log(er))
+    } 
 
    useEffect(()=>{
-     ninafacts();
+     data();
    },[])
   return (
     datas.map((el)=>{
-
         <>
             <h1>{el?.fact}</h1>
         </>
