@@ -1,24 +1,39 @@
-import  Axios from 'axios'
-import React,{useState,useEffect} from 'react'
+import React from "react";
+import { useEffect,useState} from "react";
+import Axios from "axios";
+const Nina=()=>{
+  const [users, setUsers] = useState([]);
 
-const Nina = () => {
- 
-    const[datas,setDatas]=useState([])
-  
-    const data=()=>{
-          Axios.get("http://localhost:3000/tags").then((res)=>console.log(res)).catch((er)=>console.log(er))
-    } 
+  let searchValue = "";
 
-   useEffect(()=>{
-     data();
-   },[])
-  return (
-    datas.map((el)=>{
-        <>
-            <h1>{el?.fact}</h1>
-        </>
-    })
-  )
+const getGithubData = (user) => {
+  Axios.get(`https://api.github.com/users/${user}`)
+    .then((res) =>  setUsers([res.data]))
+    .catch((er)=>{console.log(er);});
+  };
+useEffect(() => {
+  getGithubData();
+}, []);
+
+return (
+    <div style={{display:"flex"}} >
+     <input  type="text" onChange={(e) => {searchValue = e.target.value;}}/>
+    <button   onClick={() => {
+       getGithubData(searchValue);
+     }}>Submit</button>
+    {users.map((user) => {
+      return (
+          <div className="kartica">
+          <img src={user?.avatar_url}/>
+          <h1>Name:{user?.name}</h1>
+          <h1>Followers:{user?.followers}</h1>
+          <h1>Location:{user?.location}</h1>
+          <p>{user.name}</p>
+        </div>
+      );
+    })}
+  </div>
+)
 }
 
-export default Nina
+export default Nina;
