@@ -29,6 +29,7 @@ return (
           <h1>Followers:{user?.followers}</h1>
           <h1>Location:{user?.location}</h1>
           <p>{user.name}</p>
+          <p>{user.followers}</p>
         </div>
       );
     })}

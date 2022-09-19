@@ -14,10 +14,9 @@ const App =()=> {
     
     
    return ( 
-       <>
-        <Nina/>
-       </>
-
+    <>
+    kj
+    </>
   );
 
 
