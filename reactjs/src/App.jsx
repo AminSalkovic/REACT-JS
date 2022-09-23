@@ -5,6 +5,7 @@ import Axios from 'axios'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import Nina from './components/Nina';
+import axios from 'axios';
 
 //useefect reakcije cele komponente na nesto
 //use memo upordejuje vrednosti ako su iste nece rirenderovati ako nisu rirenderovace
@@ -12,10 +13,17 @@ import Nina from './components/Nina';
 
 const App =()=> {
     
+  const getData=()=>{
+     axios.get("http://localhost:3000/quotes")
+     .then((res)=> console.log(res))
+  }
+  useEffect(()=>{
+     getData()
+  },[])
     
    return ( 
     <>
-    kj
+      
     </>
   );
 
