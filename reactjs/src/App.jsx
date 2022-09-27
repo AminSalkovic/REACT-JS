@@ -14,11 +14,24 @@ import axios from 'axios';
 const App =()=> {
     
   const getData=()=>{
-     axios.get("http://localhost:3000/quotes")
-     .then((res)=> console.log(res))
+     axios.get("https://disease.sh/v3/covid-19/countries/")
+     .then((res)=> console.log(res.data))
   }
   useEffect(()=>{
      getData()
+  },[])
+
+  }
+  useEffect(()=>{
+    axios({
+      method: 'post',
+      url: 'https://disease.sh/v3/covid-19/countries/',
+      data:{
+        firstName: 'Fred',
+        lastName: 'Flintstone'
+      }
+    }).then((res)=> console.log(res.data))
+        
   },[])
     
    return ( 
