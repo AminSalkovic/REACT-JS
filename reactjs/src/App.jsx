@@ -4,7 +4,6 @@ import { Route,Routes,Link} from 'react-router-dom';
 import Axios from 'axios'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-import Nina from './components/Nina';
 import axios from 'axios';
 
 //useefect reakcije cele komponente na nesto
@@ -18,12 +17,19 @@ const App =()=> {
   const getData=()=>{
     axios.get('https://seo-api.p.rapidapi.com/v1/serp')
     .then((res)=> setData(res.data))
-    
+    .catch((err)=> console.log(err));
   }
   
+  useEffect(()=>{
+      getData();
+  },[])
   return ( 
     <>
-      
+      {data.map((item,index)=>{
+        <li key={index}>
+          <span>{item.emial}</span>
+         </li>
+      })}
     </>
   );
   
