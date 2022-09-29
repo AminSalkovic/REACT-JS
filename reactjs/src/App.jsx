@@ -12,33 +12,21 @@ import axios from 'axios';
 
 
 const App =()=> {
-    
-  const getData=()=>{
-     axios.get("https://disease.sh/v3/covid-19/countries/")
-     .then((res)=> console.log(res.data))
-  }
-  useEffect(()=>{
-     getData()
-  },[])
+  
+  const[data,setData]=useState([])
 
-  }
-  useEffect(()=>{
-    axios({
-      method: 'post',
-      url: 'https://disease.sh/v3/covid-19/countries/',
-      data:{
-        firstName: 'Fred',
-        lastName: 'Flintstone'
-      }
-    }).then((res)=> console.log(res.data))
-        
-  },[])
+  const getData=()=>{
+    axios.get('https://seo-api.p.rapidapi.com/v1/serp')
+    .then((res)=> setData(res.data))
     
-   return ( 
+  }
+  
+  return ( 
     <>
       
     </>
   );
+  
 
 
   
