@@ -28,6 +28,7 @@ const App =()=> {
       {data.map((item,index)=>{
         <li key={index}>
           <span>{item.emial}</span>
+              <p>mm</p>
          </li>
       })}
     </>
