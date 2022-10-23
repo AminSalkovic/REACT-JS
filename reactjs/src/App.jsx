@@ -28,13 +28,15 @@ const App =()=> {
       {data.map((item,index)=>{
         <li key={index}>
           <span>{item.emial}</span>
+          <p>sassa</p>
               <p>mm</p>
          </li>
       })}
     </>
   );
   
-
+  co
+  
 
   
   
@@ -138,7 +140,7 @@ const App =()=> {
 
 
 
-
+ //sddddssd
 
 
 {/* //   <Router>
