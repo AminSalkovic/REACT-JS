@@ -36,7 +36,6 @@ const GithubCard = () => {
         return (
           <div style={{ backgroundImage: `url(${user?.avatar_url})` }}>
             <h1>{user?.name}</h1>
-            <img src={user?.avatar_url} />
           </div>
         );
       })}
