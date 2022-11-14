@@ -26,9 +26,6 @@ const GithubCard = () => {
         }}
       />
       <button
-        onClick={() => {
-          getGithubData(searchValue);
-        }}
       >
         Submit
       </button>
