@@ -1,4 +1,4 @@
-
+let amin='sas'
 
  export const  Carditems=[
   {
@@ -19,4 +19,7 @@
     heading:'something5',
     message:'message'
   },
+  {
+    heading:amin
+  }
  ]
