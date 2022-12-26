@@ -16,7 +16,7 @@ import Cardlist from './components/quotes/Cardlist';
 
 const App =()=> {
 
-
+const some=''
       
   return ( 
     <>

@@ -15,7 +15,7 @@ const GithubCard = () => {
   };
   useEffect(() => {
     getGithubData();
-  }, []);
+  },[]);
 
   return (
     <div>
