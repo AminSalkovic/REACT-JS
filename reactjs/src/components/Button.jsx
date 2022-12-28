@@ -6,6 +6,7 @@ const Button=()=>{
   return(
     <Link to='sign-up'>
     <button className='btn'>Sign Up</button>
+    <button>amin</button>
     </Link>
   )
 }
