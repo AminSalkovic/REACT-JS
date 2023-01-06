@@ -8,6 +8,7 @@ const Button=()=>{
     <button className='btn'>Sign Up</button>
     <button>amin</button>
     <button>i arrived from trnava</button>
+     <button>amin</button>
     </Link>
   )
 }
