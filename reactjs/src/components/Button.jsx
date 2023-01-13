@@ -9,6 +9,7 @@ const Button=()=>{
     <button>amin</button>
     <button>i arrived from trnava</button>
      <button>amin</button>
+      <button>amin amin</button>
     </Link>
   )
 }
