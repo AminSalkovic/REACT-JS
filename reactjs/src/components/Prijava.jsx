@@ -1,3 +1,4 @@
+ import { useState } from "react";
 const Prijava=()=>{
 
     
@@ -53,6 +54,7 @@ return (
         <h1>{value.name}</h1>
         <h1>{value.lastName}</h1>
         <h1>{value.email}</h1>
+        <p>{value.email}</p>
       </div>
       </div>
 )
